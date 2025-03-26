@@ -46,7 +46,7 @@ public class DataDosen19 {
         }
     }
 
-    void pencarianDataSequential06(String cariNama) {
+    void pencarianDataSequential(String cariNama) {
         boolean ditemukan = false;
         int count = 0;
 
@@ -69,7 +69,7 @@ public class DataDosen19 {
         }
     }
 
-    void pencarianDataBinary06(int cariUsia, int left, int right) {
+    void pencarianDataBinary(int cariUsia, int left, int right) {
         int posisi = -1;
         int count = 0;
 
@@ -91,10 +91,10 @@ public class DataDosen19 {
                     i++;
                 }
             } else if (dataDosen[mid].usia > cariUsia) {
-                pencarianDataBinary06(cariUsia, left, mid - 1);
+                pencarianDataBinary(cariUsia, left, mid - 1);
                 return;
             } else {
-                pencarianDataBinary06(cariUsia, mid + 1, right);
+                pencarianDataBinary(cariUsia, mid + 1, right);
                 return;
             }
         }
