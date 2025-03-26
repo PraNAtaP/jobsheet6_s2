@@ -1,6 +1,11 @@
 public class MahasiswaBerprestasi19 {
-    Mahasiswa19[] listMhs = new Mahasiswa19[5];
+    Mahasiswa19[] listMhs;
     int idx;
+
+    MahasiswaBerprestasi19(int size) {
+        listMhs = new Mahasiswa19[size];
+        idx = 0;
+    }
 
     void tambah(Mahasiswa19 m) {
         if (idx < listMhs.length) {
@@ -59,7 +64,7 @@ public class MahasiswaBerprestasi19 {
     int sequentialSearching(double cari) {
         int posisi = -1;
         for (int j = 0; j < listMhs.length; j++) {
-            if (listMhs[j].ipk==cari) {
+            if (listMhs[j].ipk == cari) {
                 posisi = j;
                 break;
             }
@@ -77,10 +82,10 @@ public class MahasiswaBerprestasi19 {
 
     void tampilDataSearch(double x, int pos) {
         if (pos != -1) {
-            System.out.println("Nim : " + listMhs[pos].nim);
-            System.out.println("Nama : " + listMhs[pos].nama);
+            System.out.println("Nim   : " + listMhs[pos].nim);
+            System.out.println("Nama  : " + listMhs[pos].nama);
             System.out.println("Kelas : " + listMhs[pos].kelas);
-            System.out.println("Ipk : " + x);
+            System.out.println("Ipk   : " + x);
         } else {
             System.out.println("Data Mahasiswa dengan IPK " + x + " Tidak ditemukan");
         }

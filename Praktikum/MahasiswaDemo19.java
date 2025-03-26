@@ -3,8 +3,13 @@ import java.util.Scanner;
 public class MahasiswaDemo19 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        MahasiswaBerprestasi19 list = new MahasiswaBerprestasi19();
-        int jumMHS = 5;
+
+
+        System.out.print("Masukkan jumlah mahasiswa: ");
+        int jumMHS = sc.nextInt();
+        sc.nextLine(); 
+
+        MahasiswaBerprestasi19 list = new MahasiswaBerprestasi19(jumMHS);
 
         for (int i = 0; i < jumMHS; i++) {
             System.out.println("Input data mahasiswa ke-" + (i + 1));
@@ -28,8 +33,7 @@ public class MahasiswaDemo19 {
         System.out.println("----------------------------------------");
         System.out.println("Pencarian Data");
         System.out.println("----------------------------------------");
-        System.out.println("Masukkan IPK Mahasiswa yang dicari : ");
-        System.out.println("IPK : ");
+        System.out.print("Masukkan IPK Mahasiswa yang dicari: ");
         double cari = sc.nextDouble();
 
         System.out.println("----------------------------------------");
@@ -39,7 +43,7 @@ public class MahasiswaDemo19 {
         int pss2 = (int)posisi2;
         list.tampilPosisi(cari, pss2);
         list.tampilDataSearch(cari, pss2);
-
+        
         sc.close();
     }
 }
