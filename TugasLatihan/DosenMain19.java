@@ -128,13 +128,13 @@ public class DosenMain19 {
                     case 1:
                         System.out.print("Masukkan Nama Dosen yang dicari: ");
                         String cariNama = input.nextLine();
-                        dataDosen.pencarianDataSequential(cariNama);
+                        dataDosen.pencarianDataSequential19(cariNama);
                         break;
                     case 2:
                         System.out.print("Masukkan Usia Dosen yang dicari: ");
                         int cariUsia = input.nextInt();
                         dataDosen.sortingASC();
-                        dataDosen.pencarianDataBinary(cariUsia, 0, dataDosen.idx - 1);
+                        dataDosen.pencarianDataBinary19(cariUsia, 0, dataDosen.idx - 1);
                         break;
                     case 3:
                         break;
